@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc
+	xmlns="http://javacoredoc.fugerit.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://javacoredoc.fugerit.org https://www.fugerit.org/data/java/doc/xsd/doc-1-4.xsd" > 
+
+	<!--
+		
+		Use full resources : 
+		https://venusdocs.fugerit.org/ (project documentation)
+		https://www.fugerit.org/data/java/doc/xsd/doc-1-4.xsd (XSD specification of doc meta model)
+	-->
+
+  <metadata>
+  	<!-- Margin for document : left;right;top;bottom -->
+  	<info name="margins">20;20;20;20</info>  
+  </metadata>
+ 
+  <body>
+  
+  		<!-- hello world as level 1 headings -->
+  		<h head-level="1" size="30">Hello World! (heading)</h>
+  		
+  		<!-- hello world as paragraph -->
+  		<para>Hello World! (paragraph)</para>
+  		  		
+  </body>
+  
+</doc>
