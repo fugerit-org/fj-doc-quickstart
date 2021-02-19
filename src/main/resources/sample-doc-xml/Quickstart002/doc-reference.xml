@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc
+	xmlns="http://javacoredoc.fugerit.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://javacoredoc.fugerit.org https://www.fugerit.org/data/java/doc/xsd/doc-1-4.xsd" > 
+
+	<!--
+		
+		Use full resources : 
+		https://venusdocs.fugerit.org/ (project documentation)
+		https://www.fugerit.org/data/java/doc/xsd/doc-1-4.xsd (XSD specification of doc meta model)
+	-->
+
+  <metadata>
+  	<!-- Margin for document : left;right;top;bottom -->
+  	<info name="margins">20;20;20;20</info>  
+  </metadata>
+ 
+  <body>
+  
+  		<!-- here is a sample of most elements and attributes of doc-1-4.xsd format -->
+  
+  		<!-- seven headings level ara available (similar to <h1> - <h7> in html)  -->
+  		<h head-level="1" size="22">Heading level 1</h>
+  		<h head-level="2" size="20">Heading level 2</h>
+  		<h head-level="3" size="18">Heading level 3</h>
+  		<h head-level="4" size="16">Heading level 4</h>
+  		<h head-level="5" size="14">Heading level 5</h>
+  		
+  		<br/> <!-- line break -->
+  	
+  		<!-- para, similar to <p> in html -->
+  		<para>Paragraph, default align</para>
+  		<para align="center">Paragraph, center align</para>
+  		<para align="right">Paragraph, center right</para>
+  		<para align="left">Paragraph, center left</para>	
+  		<para style="bold">Paragraph, bold</para>
+  		<para style="italic">Paragraph, italic</para>
+  		<para style="bolditalic">Paragraph, bold and italic</para>
+  		
+  		<br/> <!-- line break -->
+  		
+  		<!-- phrase, similar to <span> in html -->
+  		<phrase style="bold">Phrase, bold</phrase>
+  		<phrase style="italic">Phrase, italic</phrase>
+  		<phrase style="bolditalic">Phrase, bold and italic</phrase>
+  		
+  		<br/><br/> <!-- line break -->
+  		
+  		<table columns="3" colwidths="30;30;40"  width="100">
+  			<!-- header rows are set by the fault to 'bold', 'center' when possible -->
+  			<row header="true">
+  				<cell colspan="3"><para>Sample data table</para></cell>
+  			</row>  		
+  			<row header="true">
+  				<cell><para>Name</para></cell>
+  				<cell><para>Surname</para></cell>
+  				<cell><para>Title</para></cell>
+  			</row>
+       		<row>
+    			<cell><para>Luthien</para></cell>
+    			<cell><para>Tinuviel</para></cell>
+    			<cell><para>Queen</para></cell>
+    		</row>
+       		<row>
+    			<cell><para>Thorin</para></cell>
+    			<cell><para>Oakshield</para></cell>
+    			<cell><para>King</para></cell>
+    		</row>    				
+  		</table>
+  		
+  		<br/><br/> <!-- line break -->
+  		
+  		<para style="bold">The Lord of the Rings books : </para>
+  		<list list-type="ol">
+  			<li><para>The Fellowship of the Ring</para></li>
+  			<li><para>The Two Towers</para></li>
+  			<li><para>The Return of the King</para></li>
+  		</list>
+
+  		<para style="bold">Hobbits : </para>
+  		<list list-type="ul">
+  			<li><para>Bilbo Baggins</para></li>
+  			<li><para>Frodo Baggings</para></li>
+  		</list>
+  		  		
+  </body>
+  
+</doc>

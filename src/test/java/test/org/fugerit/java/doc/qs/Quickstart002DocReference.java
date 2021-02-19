@@ -11,18 +11,13 @@ import org.fugerit.java.doc.mod.fop.PdfFopTypeHandler;
 import org.junit.Test;
 
 /**
- * file: Quickstart001HelloWorld.java
- * version : 001 (2021-02-18)
+ * file: Quickstart002DocReference.java
+ * version : 001 (2021-02-19)
  * 
- * Hellow World example for fugerit doc library (Venus)
+ * Doc Referece example (containing headings, paragraphs, phrases, table and list)
  * 
- * Goal : 	fj-doc is basically as set of A.P.I. for producing documents in various formats from a xml doc meta model.
- * 			this example will use the simpliest way of doing that, with no configuration at all.
- * 			org.fugerit.java.doc.base.facade.SimpleDocFacade will be used.
- * 			This facade let's you select three parameters : 
- * 			1) output format (as an implementation of org.fugerit.java.doc.base.config.DocTypeHandler)
- * 			2) input xml (in this example as resource in class loader)
- * 			3) destination file (in this example starting at 'target/doc_output')
+ * Goal : 	this example shows some of the elements accepted for source xml doc.
+ * 			rendering is identycal to HelloWorld example.
  * 
  * Maven dependancies : 
  * org.fugerit.java/fj-core
@@ -32,24 +27,24 @@ import org.junit.Test;
  * 
  * @see TestBase for common specs of the quickstart examples
  * @see org.fugerit.java.doc.base.facade.SimpleDocFacade
- * @see /fj-doc-quickstart/docs/quickstart/001HelloWorld.md
+ * @see /fj-doc-quickstart/docs/quickstart/002HelloWorld.md
  * 
  * @author Matteo a.k.a. Fugerit <m@fugerit.org>
  *
  */
-public class Quickstart001HelloWorld extends TestBase {
+public class Quickstart002DocReference extends TestBase {
 
 	/*
 	 *	Path of the input xml doc.
 	 *  prefix 'cl://' loads from classloader
 	 *  prefix 'file://' loads from file 
 	 */
-	public static final String PATH_HELLO_WORLD = "cl://sample-doc-xml/Quickstart001/hello-world.xml";
+	public static final String PATH_DOC_REFERENCE = "cl://sample-doc-xml/Quickstart002/doc-reference.xml";
 
-	private void generateHelloWorld( DocTypeHandler typeHandler, String fileName ) {
+	private void generateDoc( DocTypeHandler typeHandler, String fileName ) {
 		File destFile = this.getOutputFile( fileName );
 		// note that the source XML document is always the same
-		try ( Reader reader = this.loadFromClassLoader( PATH_HELLO_WORLD );
+		try ( Reader reader = this.loadFromClassLoader( PATH_DOC_REFERENCE );
 				FileOutputStream dest = new FileOutputStream( destFile ) ) {
 			SimpleDocFacade.produce( typeHandler , reader, dest );
 			logger.info( "dest -> {}", destFile.getCanonicalPath() );
@@ -60,12 +55,12 @@ public class Quickstart001HelloWorld extends TestBase {
 	
 	@Test
 	public void testPdfFop() {
-		this.generateHelloWorld( PdfFopTypeHandler.HANDLER , "hellow-world-fop.pdf" );
+		this.generateDoc( PdfFopTypeHandler.HANDLER , "doc-reference-fop.pdf" );
 	}
 	
 	@Test
 	public void testHtmlFreemarker() {
-		this.generateHelloWorld( FreeMarkerHtmlTypeHandler.HANDLER , "hellow-world-freemarker.html" );
+		this.generateDoc( FreeMarkerHtmlTypeHandler.HANDLER , "doc-reference-freemarker.html" );
 	}
 
 }
