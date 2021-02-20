@@ -6,7 +6,7 @@
 	<groupId>org.fugerit.java</groupId>
 	<artifactId>fj-doc-quickstart</artifactId>
 	<packaging>jar</packaging>
-	<version>0.3.5.3</version>
+	<version>0.3.5.4</version>
 
 	<name>fj-doc-quickstart</name>
 	<description>fj-doc-quickstart</description>
