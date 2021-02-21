@@ -5,8 +5,8 @@
 
 	<groupId>org.fugerit.java</groupId>
 	<artifactId>fj-doc-quickstart</artifactId>
-	<packaging>jar</packaging>
-	<version>0.3.5.4</version>
+	<packaging>pom</packaging>
+	<version>0.3.5.5</version>
 
 	<name>fj-doc-quickstart</name>
 	<description>fj-doc-quickstart</description>
@@ -28,15 +28,19 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java-version-compliance>1.8</java-version-compliance>
-		<j2ee-version-compliance>7.0</j2ee-version-compliance>
-		<maven.compiler.source>${java-version-compliance}</maven.compiler.source>
-		<maven.compiler.target>${java-version-compliance}</maven.compiler.target>
 		<fj-doc-version>${project.version}</fj-doc-version>
 		<slf4j-version>1.7.30</slf4j-version>		
 		<log4j-slf4j-impl-version>2.13.1</log4j-slf4j-impl-version>
 		<junit-version>4.13.1</junit-version>	   
 	</properties>
+
+	<modules>
+		<module>fj-doc-quickstart-a-basic</module>
+		<module>fj-doc-quickstart-b-freemarker</module>
+		<module>type-handler-markdown-custom</module>
+		<module>type-handler-fop-custom</module>			
+		<module>fj-doc-quickstart-c-advanced</module>
+	</modules>
 
 	<build>
 
@@ -47,52 +51,6 @@
 	</build>
 
 	<dependencies>
-
-		<dependency>
-			<groupId>org.fugerit.java</groupId>
-			<artifactId>fj-doc-base</artifactId>
-			<version>${fj-doc-version}</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.fugerit.java</groupId>
-			<artifactId>fj-doc-freemarker</artifactId>
-			<version>${fj-doc-version}</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.fugerit.java</groupId>
-			<artifactId>fj-doc-mod-fop</artifactId>
-			<version>${fj-doc-version}</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j-version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${slf4j-version}</version>
-			<scope>test</scope>
-		</dependency>	
-		<dependency>
-		    <groupId>org.apache.logging.log4j</groupId>
-		    <artifactId>log4j-slf4j-impl</artifactId>
-		    <version>${log4j-slf4j-impl-version}</version>
-		    <scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit-version}</version>
-		</dependency>
 
 	</dependencies>
 

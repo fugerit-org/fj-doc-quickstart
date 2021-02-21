@@ -11,7 +11,7 @@
 * A XML source document (in the format specified by https://www.fugerit.org/data/java/doc/xsd/doc-1-4.xsd)
 * The output destination (for instance a File our OutputStream)
 
-The simpliest way to do so is by SimpleDocFacade seen in [Quickstart001HelloWorld](quickstart/001HelloWorld.md).
+The simpliest way to do so is by SimpleDocFacade seen in [QuickstartA001HelloWorld](quickstart/001HelloWorld.md).
 
 Of course it's possible to compose the XML source document in any way.  
 *Venus* provides facilities to dynamically produces the XML source by a template engine (apache freemarker).

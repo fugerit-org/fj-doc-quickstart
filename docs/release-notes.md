@@ -1,11 +1,18 @@
-﻿0.3.5.4 (2021-02-20)
+﻿0.3.5.5 (2021-02-21)
 --------------------
-+ Quickstart003DocHandlerFacade
-+ Quickstart004ProcessDocFacade
++ new project structure in modules (A, B, C)
++ QuickstartA004ProcessDocFacade renamed in QuickstartB004ProcessDocFacade
++ QuickstartC001CustomFopTypeHandler
++ QuickstartC002CustomMarkdownTypeHandler
+
+0.3.5.4 (2021-02-20)
+--------------------
++ QuickstartA003DocHandlerFacade
++ QuickstartA004ProcessDocFacade
 
 0.3.5.3 (2021-02-18)
 --------------------
 + Basic project setup
 + Basic concepts
-+ Quickstart001HelloWorld
-+ Quickstart002DocReference
++ QuickstartA001HelloWorld
++ QuickstartA002DocReference

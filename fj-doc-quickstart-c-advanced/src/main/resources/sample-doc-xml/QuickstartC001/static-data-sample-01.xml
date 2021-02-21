@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc
+	xmlns="http://javacoredoc.fugerit.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://javacoredoc.fugerit.org https://www.fugerit.org/data/java/doc/xsd/doc-1-1.xsd" > 
+
+  <!-- 
+  	Sample Apache FreeMarker template for Fugerit Doc.
+  	Note : this example has no intention of being a guidr to FreeMarker
+  			(In case check FreeMarker documentation https://freemarker.apache.org/docs/index.html)
+   -->
+
+  <meta>
+  </meta>
+ 
+  <body>
+  
+  		<h head-level="1" style="bold" size="16">Dynamic data table example based on apache free marker template</h>
+  
+  		<list>
+  			<li><para>Linux</para></li>
+  			<li><para>Windows</para></li>
+  			<li><para>macOS</para></li>
+  		</list>
+  
+    	<table columns="3" colwidths="30;30;40"  width="100" id="excel-table" padding="2">
+    		<row header="true">
+    			<cell><para style="bold">Name</para></cell>
+    			<cell><para style="bold">Surname</para></cell>
+    			<cell><para style="bold">Title</para></cell>
+    		</row>
+			<row>
+    			<cell><para>Alan</para></cell>
+    			<cell><para>Turing</para></cell>
+    			<cell><para>Jun 23, 1912</para></cell>
+    		</row>
+       		<row>
+    			<cell><para>Edsger</para></cell>
+    			<cell><para>Dijkstra</para></cell>
+    			<cell><para>May 11, 1930</para></cell>
+    		</row>
+       		<row>
+    			<cell><para>Linus</para></cell>
+    			<cell><para>Torvalds</para></cell>
+    			<cell><para>Dec 28, 1969</para></cell>
+    		</row>
+    	</table>
+    	
+  </body>
+  
+</doc>
