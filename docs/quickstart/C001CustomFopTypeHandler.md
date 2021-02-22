@@ -25,3 +25,10 @@ Here is a summary of how this type handler has been created :
 * In [Process Config File](../..//fj-doc-quickstart-c-advanced/src/main/resources/custom_fm_fop/fop-process-config.xml) the class parameter has been changed to map our new class class="org.fugerit.java.doc.qs.handler.fop.FreeMarkerFopProcess"
 * In [Basic Free Marker Template](../../fj-doc-quickstart-c-advanced/src/main/resources/custom_fm_fop/template/fop_doc.ftl) we added the fo block for our first customization '<fo:block>My Custom DocTypeHandler</fo:block><!-- customization 1 -->'
 * In [Free Marker Macro For Table](../..//fj-doc-quickstart-c-advanced/src/main/resources/custom_fm_fop/template/macro/doc_element.ftl) we added our second customization '<fo:table-${cellType} <#if cellType == 'header'> font-weight="bold" text-align="left"</#if>><!-- customization 2 -->'
+
+DocTypeHandler customization disadvantages : 
+* You don't automatically get fix and improvement on the original DocTypeHandler
+
+DocTypeHandler customization advantages : 
+* You can add or change features
+* You can control in detail rendering
