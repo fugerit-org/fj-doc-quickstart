@@ -69,6 +69,10 @@ Here is a simple [configuration file](../../fj-doc-quickstart-b-freemarker/src/m
 
 Here is the [freemarker template](../../fj-doc-quickstart-b-freemarker/src/main/resources/free_marker_quickstart/dynamic-table-data.ftl)
 
+### Dynamix Doc workflow : 
+
+![Dynamix Doc workflow](https://venusdocs.fugerit.org/docs/img/102_dynamic_pipeline.gif)
+
 ### DocProcessConfig workflow : 
 
 ![DocProcessConfig workflow](https://venusdocs.fugerit.org/docs/img/004_doc_process_config.gif)

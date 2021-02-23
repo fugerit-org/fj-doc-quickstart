@@ -17,6 +17,13 @@
     * [QuickstartC001CustomFopTypeHandler](docs/quickstart/C001CustomFopTypeHandler.md) - [java source](fj-doc-quickstart-c-advanced/src/test/java/test/org/fugerit/java/doc/qs/QuickstartC001CustomFopTypeHandler.java) - [xml doc source](fj-doc-quickstart-c-advanced/src/main/resources/sample-doc-xml/QuickstartC001/static-data-sample-01.xml)
     * [QuickstartC002CustomMarkdownTypeHandler](docs/quickstart/C002CustomMarkdownTypeHandler.md) - [java source](fj-doc-quickstart-c-advanced/src/test/java/test/org/fugerit/java/doc/qs/QuickstartC002CustomMarkdownTypeHandler.java) - [xml doc source](fj-doc-quickstart-c-advanced/src/main/resources/sample-doc-xml/QuickstartC001/static-data-sample-01.xml)    
 
+**Project structure :**
+* *fj-doc-quickstart-a-basic* , basic examples with static xml doc source
+* *fj-doc-quickstart-b-freemarker* , dynamic examples which generates xml doc source using freemarker temaples (probably the most common usage)
+* *fj-doc-quickstart-c-advanced* , advanced features examples (for instance custom type handler) 
+* *custom-type-handler-fop* , sample custom type handler changing behaviour of fj-doc-mod-fop type handler
+* *custom-type-handler-markdown* , sample custom type handlers from scratch, for markdown output format (both basic and extended)
+
 **Other useful resources :**
 * [XSD specification of Venus doc format](https://www.fugerit.org/data/java/doc/xsd/doc-1-4.xsd)
 * [Venus Documentation Home](https://venusdocs.fugerit.org/)
