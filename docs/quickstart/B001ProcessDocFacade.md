@@ -10,13 +10,17 @@
 * org.fugerit.java/fj-doc-freemarker	(for both html and pdf fop handlers)
 * org.fugerit.java/fj-doc-mod-fop	(for pdf fop handler)
 
-[QuickstartA004ProcessDocFacade](../../fj-doc-quickstart-b-freemarker/src/test/java/test/org/fugerit/java/doc/qs/QuickstartB001ProcessDocFacade.java) show how to create and use a [ProcessDocFacade](https://venusdocs.fugerit.org/fj-doc-base/src/main/java/org/fugerit/java/doc/base/facade/ProcessDocFacade.java).
+[QuickstartB001ProcessDocFacade](../../fj-doc-quickstart-b-freemarker/src/test/java/test/org/fugerit/java/doc/qs/QuickstartB001ProcessDocFacade.java) show how to create and use a [ProcessDocFacade](https://venusdocs.fugerit.org/fj-doc-base/src/main/java/org/fugerit/java/doc/base/facade/ProcessDocFacade.java).
 
 **DocProcessConfig** can be configured to handle a chain of steps, ultimately producing a XML doc source, this source can be then used to produce the actual output document throws **DocHandlerFacade**
 
 **ProcessDocFacade** combines the functionalities of [DocHandlerFacade](https://venusdocs.fugerit.org/fj-doc-base/src/main/java/org/fugerit/java/doc/base/facade/DocHandlerFacade.java) (seen in [QuickstartA003DocHandlerFacade](003DocHandlerFacade.md)) to a [DocProcessConfig](https://venusdocs.fugerit.org/fj-doc-base/src/main/java/org/fugerit/java/doc/base/process/DocProcessConfig.java).
 
 *HINT: In a way DocProcessConfig is similar to a servlet engine. the processing steps can be compared to a a Filter/Servlet chain, while the free marker template to a JSP.*
+
+To use standard build it free marker functions see : 
+[https://freemarker.apache.org/docs/ref_builtins.html](https://freemarker.apache.org/docs/ref_builtins.html)
+(build int functions are always available in free marker template)
 
 Here is a simple [configuration file](../../fj-doc-quickstart-b-freemarker/src/main/resources/doc-facade/doc-process-quickstart.xml) for DocProcessConfig: 
 

@@ -55,5 +55,28 @@
 		</step>	
 	</chain>
 	
+	<!--
+		A chain can extends one or more other chains (in this case 'config' chain)
+	-->
+	<chain id="custom-free-marker-method" extends="config,free-marker-fun">
+		<!--
+			This step map attributes provided in the DocProcessContext to Free Marker Root Map.
+			In this case 'characterList' attributes is mapped to an entry with the same name : characterList="characterList"
+		-->
+		<step id="step-data" defaultBehaviour="CONTINUE"
+			description="Map items from DocContext to FreeMarker Data" 
+			type="org.fugerit.java.doc.freemarker.config.FreeMarkerMapStep">		
+			<properties messageData="messageData"/>		
+		</step>
+		<!--
+			This step apply the actual free marker template and produce the static XML source.
+			This XML source is then available to be rendered.
+		-->					
+		<step id="step-process" defaultBehaviour="CONTINUE"
+			description="Apply FreeMarker template to get the full XML" 
+			type="org.fugerit.java.doc.freemarker.config.FreeMarkerProcessStep"
+			param01="custom-free-marker-method.ftl"/>
+	</chain>	
+	
 
 </doc-process>

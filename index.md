@@ -1,6 +1,8 @@
 ## Quickstart for fj-doc project (Venus)
 
-*Version : 0.3.5.5 (fj-mod-quickstart version always refers to fj-mod-doc version used too)*
+*Version : 0.3.5.5 (fj-mod-quickstart version is always the fj-doc version used)*
+
+*Date : 2021-02-23*
 
 *Venus* primary goal is to provide a simple xml doc template to render documents in various formats
 
@@ -13,6 +15,7 @@
     * [QuickstartA003DocHandlerFacade](docs/quickstart/A003DocHandlerFacade.md) - [java source](fj-doc-quickstart-a-basic/src/test/java/test/org/fugerit/java/doc/qs/QuickstartA003DocHandlerFacade.java) - [xml doc source](fj-doc-quickstart-a-basic/src/main/resources/sample-doc-xml/QuickstartA003/static-data-table.xml)
 * Dynamic free marker template examples (fj-mod-quickstart-b-freemarker module): 
     * [QuickstartB001ProcessDocFacade](docs/quickstart/B001ProcessDocFacade.md) - [java source](fj-doc-quickstart-b-freemarker/src/test/java/test/org/fugerit/java/doc/qs/QuickstartB001ProcessDocFacade.java) - [free marker template](fj-doc-quickstart-b-freemarker/src/main/resources/free_marker_quickstart/dynamic-table-data.ftl)
+    * [QuickstartB002CustomFreeMarkerMethod](docs/quickstart/B002CustomFreeMarkerMethod.md) - [java source](fj-doc-quickstart-b-freemarker/src/test/java/test/org/fugerit/java/doc/qs/QuickstartB002CustomFreeMarkerMethod.java) - [free marker template](fj-doc-quickstart-b-freemarker/src/main/resources/free_marker_quickstart/custom-free-marker-method.ftl)
 * Advanced customization examples (fj-mod-quickstart-c-advanced module): 
     * [QuickstartC001CustomFopTypeHandler](docs/quickstart/C001CustomFopTypeHandler.md) - [java source](fj-doc-quickstart-c-advanced/src/test/java/test/org/fugerit/java/doc/qs/QuickstartC001CustomFopTypeHandler.java) - [xml doc source](fj-doc-quickstart-c-advanced/src/main/resources/sample-doc-xml/QuickstartC001/static-data-sample-01.xml)
     * [QuickstartC002CustomMarkdownTypeHandler](docs/quickstart/C002CustomMarkdownTypeHandler.md) - [java source](fj-doc-quickstart-c-advanced/src/test/java/test/org/fugerit/java/doc/qs/QuickstartC002CustomMarkdownTypeHandler.java) - [xml doc source](fj-doc-quickstart-c-advanced/src/main/resources/sample-doc-xml/QuickstartC001/static-data-sample-01.xml)    
