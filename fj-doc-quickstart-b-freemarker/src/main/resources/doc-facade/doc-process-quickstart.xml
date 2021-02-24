@@ -78,5 +78,24 @@
 			param01="custom-free-marker-method.ftl"/>
 	</chain>	
 	
+	<chain id="base64-image" extends="config">
+		<!--
+			This step map attributes provided in the DocProcessContext to Free Marker Root Map.
+			In this case 'characterList' attributes is mapped to an entry with the same name : characterList="characterList"
+		-->
+		<step id="step-data" defaultBehaviour="CONTINUE"
+			description="Map items from DocContext to FreeMarker Data" 
+			type="org.fugerit.java.doc.freemarker.config.FreeMarkerMapStep">		
+			<properties imgDynamicPipelineBase64="imgDynamicPipelineBase64"/>		
+		</step>
+		<!--
+			This step apply the actual free marker template and produce the static XML source.
+			This XML source is then available to be rendered.
+		-->					
+		<step id="step-process" defaultBehaviour="CONTINUE"
+			description="Apply FreeMarker template to get the full XML" 
+			type="org.fugerit.java.doc.freemarker.config.FreeMarkerProcessStep"
+			param01="base64-image.ftl"/>
+	</chain>		
 
 </doc-process>

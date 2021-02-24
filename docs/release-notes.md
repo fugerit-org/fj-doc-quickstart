@@ -1,4 +1,19 @@
-﻿0.3.5.5 (2021-02-21)
+﻿0.3.5.6 (2021-02-24)
+--------------------
++ QuickstartB003EmbedBase64Image
+
+0.3.5.5 (2021-02-23)
+--------------------
++ QuickstartB002CustomFreeMarkerMethod
+
+0.3.5.5 (2021-02-21)
+--------------------
++ new project structure in modules (A, B, C)
++ QuickstartA004ProcessDocFacade renamed in QuickstartB004ProcessDocFacade
++ QuickstartC001CustomFopTypeHandler
++ QuickstartC002CustomMarkdownTypeHandler
+
+0.3.5.5 (2021-02-21)
 --------------------
 + new project structure in modules (A, B, C)
 + QuickstartA004ProcessDocFacade renamed in QuickstartB004ProcessDocFacade

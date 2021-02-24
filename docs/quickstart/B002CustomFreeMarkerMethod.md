@@ -1,6 +1,6 @@
 [Docs Home](../../index.md)
 
-## B002CustomFreeMarkerMethod
+## QuickstartB002CustomFreeMarkerMethod
 
 *version : 001*
 
