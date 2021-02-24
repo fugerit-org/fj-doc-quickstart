@@ -1,6 +1,6 @@
 ## Quickstart for fj-doc project (Venus)
 
-*Version : 0.3.5.6 (fj-mod-quickstart version is always the fj-doc version used)*
+*Version : 0.3.5.7 (fj-mod-quickstart version is always the fj-doc version used)*
 
 *Date : 2021-02-24*
 
@@ -17,11 +17,12 @@
     * [QuickstartB001ProcessDocFacade](docs/quickstart/B001ProcessDocFacade.md) - [java source](fj-doc-quickstart-b-freemarker/src/test/java/test/org/fugerit/java/doc/qs/QuickstartB001ProcessDocFacade.java) - [free marker template](fj-doc-quickstart-b-freemarker/src/main/resources/free_marker_quickstart/dynamic-table-data.ftl)
     * [QuickstartB002CustomFreeMarkerMethod](docs/quickstart/B002CustomFreeMarkerMethod.md) - [java source](fj-doc-quickstart-b-freemarker/src/test/java/test/org/fugerit/java/doc/qs/QuickstartB002CustomFreeMarkerMethod.java) - [free marker template](fj-doc-quickstart-b-freemarker/src/main/resources/free_marker_quickstart/custom-free-marker-method.ftl)
     * [QuickstartB003EmbedBase64Image](docs/quickstart/B003EmbedBase64Image.md) - [java source](fj-doc-quickstart-b-freemarker/src/test/java/test/org/fugerit/java/doc/qs/QuickstartB003EmbedBase64Image.java) - [free marker template](fj-doc-quickstart-b-freemarker/src/main/resources/free_marker_quickstart/base64-image.ftl)    
+    * [QuickstartB004ComplexProcessStep](docs/quickstart/B004ComplexProcessStep.md) - [java source](fj-doc-quickstart-b-freemarker/src/test/java/test/org/fugerit/java/doc/qs/QuickstartB004ComplexProcessStep.java) - [free marker template](fj-doc-quickstart-b-freemarker/src/main/resources/free_marker_quickstart/complex-process-step.ftl)    
 * Advanced customization examples (fj-mod-quickstart-c-advanced module): 
     * [QuickstartC001CustomFopTypeHandler](docs/quickstart/C001CustomFopTypeHandler.md) - [java source](fj-doc-quickstart-c-advanced/src/test/java/test/org/fugerit/java/doc/qs/QuickstartC001CustomFopTypeHandler.java) - [xml doc source](fj-doc-quickstart-c-advanced/src/main/resources/sample-doc-xml/QuickstartC001/static-data-sample-01.xml)
     * [QuickstartC002CustomMarkdownTypeHandler](docs/quickstart/C002CustomMarkdownTypeHandler.md) - [java source](fj-doc-quickstart-c-advanced/src/test/java/test/org/fugerit/java/doc/qs/QuickstartC002CustomMarkdownTypeHandler.java) - [xml doc source](fj-doc-quickstart-c-advanced/src/main/resources/sample-doc-xml/QuickstartC001/static-data-sample-01.xml)    
 
-**Project structure :**
+**Project structure (maven modules) :**
 * *fj-doc-quickstart-a-basic* , basic examples with static xml doc source
 * *fj-doc-quickstart-b-freemarker* , dynamic examples which generates xml doc source using freemarker temaples (probably the most common usage)
 * *fj-doc-quickstart-c-advanced* , advanced features examples (for instance custom type handler) 
