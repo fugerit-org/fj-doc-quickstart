@@ -40,6 +40,7 @@
 		<module>type-handler-markdown-custom</module>
 		<module>type-handler-fop-custom</module>			
 		<module>fj-doc-quickstart-c-advanced</module>
+		<module>fj-doc-quickstart-demo</module>
 	</modules>
 
 	<build>
