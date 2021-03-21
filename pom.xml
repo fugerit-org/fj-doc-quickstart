@@ -28,6 +28,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>11</java.version>
+	    <maven.compiler.source>${java.version}</maven.compiler.source>
+	    <maven.compiler.target>${java.version}</maven.compiler.target>		
 		<fj-doc-version>${project.version}</fj-doc-version>
 		<slf4j-version>1.7.30</slf4j-version>		
 		<log4j-slf4j-impl-version>2.13.1</log4j-slf4j-impl-version>
@@ -40,7 +43,8 @@
 		<module>type-handler-markdown-custom</module>
 		<module>type-handler-fop-custom</module>			
 		<module>fj-doc-quickstart-c-advanced</module>
-		<module>fj-doc-quickstart-demo</module>
+		<module>fj-doc-quickstart-demo-springboot</module>
+		<module>fj-doc-quickstart-demo-quarkus</module>
 	</modules>
 
 	<build>
