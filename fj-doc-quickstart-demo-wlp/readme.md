@@ -8,4 +8,4 @@ To build and run server :
 
 You can reach the application at :
 
-[http://localhost:8080/fj-doc-quickstart-demo-wlp/api/pdftest](http://localhost:8080/fj-doc-quickstart-demo-wlp/api/pdftest)
+[http://localhost:8080/pdftest](http://localhost:8080/pdftest)

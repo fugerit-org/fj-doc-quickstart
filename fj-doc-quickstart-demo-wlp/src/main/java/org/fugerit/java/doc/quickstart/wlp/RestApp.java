@@ -5,7 +5,7 @@ import java.util.Set;
 
 import javax.ws.rs.ApplicationPath;
 
-@ApplicationPath("/api")
+@ApplicationPath("/")
 public class RestApp extends javax.ws.rs.core.Application {
 
 	   public Set<Class<?>> getClasses() {
