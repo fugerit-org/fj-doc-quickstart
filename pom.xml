@@ -45,6 +45,7 @@
 		<module>fj-doc-quickstart-c-advanced</module>
 		<module>fj-doc-quickstart-demo-springboot</module>
 		<module>fj-doc-quickstart-demo-quarkus</module>
+		<module>fj-doc-quickstart-demo-wlp</module>
 	</modules>
 
 	<build>
