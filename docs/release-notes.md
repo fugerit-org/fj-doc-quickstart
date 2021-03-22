@@ -1,4 +1,10 @@
-﻿0.3.5.7 (2021-02-24)
+﻿0.3.5.9 (2021-03-22)
+--------------------
++ Added demo app running on spring boot
++ Added demo app running on quarkus
++ Added demo app running on web sphere liberty (microprofile)
+
+0.3.5.7 (2021-02-24)
 --------------------
 + QuickstartB004ComplexProcessStep
 

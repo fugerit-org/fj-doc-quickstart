@@ -1,8 +1,8 @@
 ## Quickstart for fj-doc project (Venus)
 
-*Version : 0.3.5.7 (fj-mod-quickstart version is always the fj-doc version used)*
+*Version : 0.3.5.9 (fj-mod-quickstart version is always the fj-doc version used)*
 
-*Date : 2021-02-24*
+*Date : 2021-03-22*
 
 *Venus* primary goal is to provide a simple xml doc template to render documents in various formats
 
@@ -28,6 +28,9 @@
 * *fj-doc-quickstart-c-advanced* , advanced features examples (for instance custom type handler) 
 * *custom-type-handler-fop* , sample custom type handler changing behaviour of fj-doc-mod-fop type handler
 * *custom-type-handler-markdown* , sample custom type handlers from scratch, for markdown output format (both basic and extended)
+* *fj-doc-quickstart-demo-springboot*, demo application running on spring boot (see [readme](fj-doc-quickstart-demo-springboot/readme.md))
+* *fj-doc-quickstart-demo-quarkus*, demo application running on quarkus (see [readme](fj-doc-quickstart-demo-quarkus/readme.md))
+* *fj-doc-quickstart-demo-wlp*, demo application running on web sphere liberty (see [readme](fj-doc-quickstart-demo-wlp/readme.md))
 
 **Other useful resources :**
 * [XSD specification of Venus doc format](https://www.fugerit.org/data/java/doc/xsd/doc-1-4.xsd)
