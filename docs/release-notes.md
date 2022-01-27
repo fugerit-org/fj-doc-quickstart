@@ -1,4 +1,8 @@
-﻿0.3.5.9 (2021-03-22)
+﻿0.3.7.3 (2022-01-27)
+--------------------
++ Update fj-doc version
+
+0.3.5.9 (2021-03-22)
 --------------------
 + Added demo app running on spring boot
 + Added demo app running on quarkus

@@ -6,7 +6,7 @@
 	<groupId>org.fugerit.java</groupId>
 	<artifactId>fj-doc-quickstart</artifactId>
 	<packaging>pom</packaging>
-	<version>0.3.6.7</version>
+	<version>0.3.7.3</version>
 
 	<name>fj-doc-quickstart</name>
 	<description>fj-doc-quickstart</description>
