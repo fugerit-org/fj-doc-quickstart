@@ -15,6 +15,7 @@ import org.fugerit.java.doc.base.model.DocList;
 import org.fugerit.java.doc.base.model.DocPara;
 import org.fugerit.java.doc.base.model.DocPhrase;
 import org.fugerit.java.doc.base.model.DocRow;
+import org.fugerit.java.doc.base.model.DocStyle;
 import org.fugerit.java.doc.base.model.DocTable;
 import org.fugerit.java.doc.base.model.util.DocTableUtil;
 
@@ -66,6 +67,20 @@ public class MarkdownBasicDocFacade extends DocTypeFacadeDefault {
 		this.getWriter().flush();	
 	}
 
+	private void addStyle( DocStyle docStyle, int textStyle ) {
+		if ( textStyle == DocPara.STYLE_BOLD || textStyle == DocPara.STYLE_BOLDITALIC ) {
+			this.writer.print( "**" );
+		} else if ( textStyle == DocPara.STYLE_ITALIC ) {
+			this.writer.print( "*" );
+		}
+	}
+	
+	private void handleText(DocStyle docStyle, DocContainer parent, DocTypeFacadeHelper helper, String text, int textStyle) throws Exception {
+		this.addStyle(docStyle, textStyle);
+		this.writer.print( text );
+		this.addStyle(docStyle, textStyle);
+	}
+	
 	@Override
 	public void handlePara(DocPara docPara, DocContainer parent, DocTypeFacadeHelper helper) throws Exception {
 		boolean body = ( helper.getDepth() == DocTypeFacadeHelper.ROOT_DEPTH );
@@ -78,7 +93,7 @@ public class MarkdownBasicDocFacade extends DocTypeFacadeDefault {
 			this.writer.print( " " );
 		}
 		// test
-		this.writer.print( docPara.getText() );
+		this.handleText( docPara, parent, helper, docPara.getText(), docPara.getStyle() );
 		if ( body ) {
 			this.writer.println( "  " );	// endline with two white spaces	
 		} else {
@@ -88,7 +103,7 @@ public class MarkdownBasicDocFacade extends DocTypeFacadeDefault {
 
 	@Override
 	public void handlePhrase(DocPhrase docPhrase, DocContainer parent, DocTypeFacadeHelper helper) throws Exception {
-		this.writer.print( docPhrase.getText() );
+		this.handleText( docPhrase, parent, helper, docPhrase.getText(), docPhrase.getStyle() );
 		this.writer.print( " " );
 	}
 

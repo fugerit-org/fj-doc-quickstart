@@ -17,12 +17,15 @@
   
   		<h head-level="1" style="bold" size="16">Dynamic data table example based on apache free marker template</h>
   
+  		<para style="italic">sample italic text</para>
+  		<para style="bold">sample bold text</para>
+  
   		<list>
   			<li><para>Linux</para></li>
   			<li><para>Windows</para></li>
   			<li><para>macOS</para></li>
   		</list>
-  
+ 
     	<table columns="3" colwidths="30;30;40"  width="100" id="excel-table" padding="2">
     		<row header="true">
     			<cell><para style="bold">Name</para></cell>
