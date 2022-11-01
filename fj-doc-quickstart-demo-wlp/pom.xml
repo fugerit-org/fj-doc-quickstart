@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.fugerit.java</groupId>
 		<artifactId>fj-doc-quickstart</artifactId>
-		<version>0.3.9.4</version>
+		<version>0.3.9.5</version>
 	</parent>
 
 	<artifactId>fj-doc-quickstart-demo-wlp</artifactId>
@@ -29,15 +29,16 @@
 		<j2ee-version-compliance>7.0</j2ee-version-compliance>
 		<maven.compiler.source>${java-version-compliance}</maven.compiler.source>
 		<maven.compiler.target>${java-version-compliance}</maven.compiler.target>
-		<junit-version>4.13.1</junit-version>
-		<slf4j-version>1.7.26</slf4j-version>
+		<junit-version>4.13.2</junit-version>
+		<slf4j-version>1.7.36</slf4j-version>
 		<log4j-version>1.2.17</log4j-version>
 		<war-name>${project.artifactId}</war-name>
 		<war-folder>${project.build.directory}/${war-name}</war-folder>
 		<wlp-version>20.0.0.5</wlp-version>
 		<wlp-maven-version>3.0.M1</wlp-maven-version>
 		<packaging.type>minify,runnable</packaging.type>
-		<freemarker-maven-plugin-version>1.0.3</freemarker-maven-plugin-version>		
+		<freemarker-maven-plugin-version>1.0.3</freemarker-maven-plugin-version>
+		<liberty.version>21.0.0.12</liberty.version>		
 	</properties>
 
 	<build>
@@ -53,9 +54,9 @@
 			</plugin>	
 
 			<plugin>
-			  <groupId>net.wasdev.wlp.maven.plugins</groupId>
+			  <groupId>io.openliberty.tools</groupId>
 			  <artifactId>liberty-maven-plugin</artifactId>
-			  <version>3.0.M1</version>
+			  <version>3.7.1</version>
 			  <configuration>
 			    <configFile>src/main/wlp/server.xml</configFile>
 			    <bootstrapProperties>

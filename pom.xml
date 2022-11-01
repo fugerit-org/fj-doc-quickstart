@@ -6,7 +6,7 @@
 	<groupId>org.fugerit.java</groupId>
 	<artifactId>fj-doc-quickstart</artifactId>
 	<packaging>pom</packaging>
-	<version>0.3.9.4</version>
+	<version>0.3.9.5</version>
 
 	<name>fj-doc-quickstart</name>
 	<description>fj-doc-quickstart</description>
@@ -32,9 +32,9 @@
 	    <maven.compiler.source>${java.version}</maven.compiler.source>
 	    <maven.compiler.target>${java.version}</maven.compiler.target>		
 		<fj-doc-version>${project.version}</fj-doc-version>
-		<slf4j-version>1.7.30</slf4j-version>		
-		<log4j-slf4j-impl-version>2.13.1</log4j-slf4j-impl-version>
-		<junit-version>4.13.1</junit-version>	   
+		<slf4j-version>1.7.36</slf4j-version>		
+		<log4j-slf4j-impl-version>2.19.0</log4j-slf4j-impl-version>
+		<junit-version>4.13.2</junit-version>	   
 	</properties>
 
 	<modules>
