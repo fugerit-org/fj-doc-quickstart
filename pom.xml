@@ -6,15 +6,43 @@
 	<groupId>org.fugerit.java</groupId>
 	<artifactId>fj-doc-quickstart</artifactId>
 	<packaging>pom</packaging>
-	<version>0.3.9.5</version>
+	<version>0.3.9.5-b2</version>
 
 	<name>fj-doc-quickstart</name>
 	<description>fj-doc-quickstart</description>
 
 	<organization>
-		<url>http://www.fugerit.org</url>
+		<url>https://www.fugerit.org</url>
 		<name>Fugerit</name>
 	</organization>
+
+	<developers>
+		<developer>
+			<name>Matteo a.k.a. Fugerit</name>
+			<email>m@fugerit.org</email>
+			<organization>Fugerit</organization>
+			<organizationUrl>https://www.fugerit.org</organizationUrl>
+		</developer>
+		<developer>
+			<name>Daneel</name>
+			<email>d@fugerit.org</email>
+			<organization>Fugerit</organization>
+			<organizationUrl>https://www.fugerit.org</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/fugerit-org/fj-doc-quickstart.git</connection>
+		<developerConnection>scm:git:ssh://github.com/fugerit-org/fj-doc-quickstart.git</developerConnection>
+		<url>http://github.com/fugerit-org/fj-doc-quickstart</url>
+	</scm>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<url>http://www.fugerit.org/java/</url>
 
@@ -31,10 +59,15 @@
 		<java.version>11</java.version>
 	    <maven.compiler.source>${java.version}</maven.compiler.source>
 	    <maven.compiler.target>${java.version}</maven.compiler.target>		
-		<fj-doc-version>${project.version}</fj-doc-version>
+		<fj-doc-version>0.3.9.5</fj-doc-version>
 		<slf4j-version>1.7.36</slf4j-version>		
 		<log4j-slf4j-impl-version>2.19.0</log4j-slf4j-impl-version>
-		<junit-version>4.13.2</junit-version>	   
+		<junit-version>4.13.2</junit-version>	 
+	    <mvn-source-version>3.2.1</mvn-source-version>
+	    <mvn-javadoc-version>3.2.0</mvn-javadoc-version>  
+	    <!-- release dependancies -->
+	    <nexus-version>1.6.8</nexus-version>
+	    <mvn-gpg-version>1.6</mvn-gpg-version>	
 	</properties>
 
 	<modules>
@@ -59,5 +92,65 @@
 	<dependencies>
 
 	</dependencies>
+	
+	<profiles>
+	
+		<profile>
+			<id>full</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-source-plugin</artifactId>
+							<version>${mvn-source-version}</version>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-javadoc-plugin</artifactId>
+							<version>${mvn-javadoc-version}</version>
+						</plugin>
+					</plugins>					
+				</pluginManagement>
+			</build>
+		</profile>
+	
+		<profile>
+			<id>doRelease</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<version>${nexus-version}</version>
+						<extensions>true</extensions>
+						<configuration>
+							<serverId>ossrh</serverId>
+							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+							<autoReleaseAfterClose>true</autoReleaseAfterClose>
+						</configuration>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>${mvn-gpg-version}</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+
+	
+	</profiles>
 
 </project>
