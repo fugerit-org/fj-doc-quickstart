@@ -1,6 +1,6 @@
 ## Quickstart for fj-doc project (Venus)
 
-*Version : 0.3.5.9 (fj-mod-quickstart version is always the fj-doc version used)*
+*Version : 0.5.0 (fj-mod-quickstart base version is always the fj-doc version used)*
 
 *Date : 2021-03-22*
 
