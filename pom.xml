@@ -3,10 +3,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.fugerit.java</groupId>
+	<parent>
+		<groupId>org.fugerit.java</groupId>
+		<artifactId>fj-bom</artifactId>
+		<version>0.2.2</version>
+		<relativePath></relativePath>
+	</parent>
+
 	<artifactId>fj-doc-quickstart</artifactId>
 	<packaging>pom</packaging>
-	<version>0.3.9.5-b4</version>
+	<version>0.5.0</version>
 
 	<name>fj-doc-quickstart</name>
 	<description>fj-doc-quickstart</description>
@@ -59,15 +65,7 @@
 		<java.version>11</java.version>
 	    <maven.compiler.source>${java.version}</maven.compiler.source>
 	    <maven.compiler.target>${java.version}</maven.compiler.target>		
-		<fj-doc-version>0.3.9.5</fj-doc-version>
-		<slf4j-version>1.7.36</slf4j-version>		
-		<log4j-slf4j-impl-version>2.19.0</log4j-slf4j-impl-version>
-		<junit-version>4.13.2</junit-version>	 
-	    <mvn-source-version>3.2.1</mvn-source-version>
-	    <mvn-javadoc-version>3.2.0</mvn-javadoc-version>  
-	    <!-- release dependancies -->
-	    <nexus-version>1.6.8</nexus-version>
-	    <mvn-gpg-version>1.6</mvn-gpg-version>	
+		<fj-doc-version>0.5.0</fj-doc-version>		  	
 	</properties>
 
 	<modules>
@@ -93,81 +91,4 @@
 
 	</dependencies>
 	
-	<profiles>
-	
-		<profile>
-			<id>full</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-source-plugin</artifactId>
-						<version>${mvn-source-version}</version>
-						<executions>
-							<execution>
-								<id>attach-sources</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>${mvn-javadoc-version}</version>
-						<configuration>
-							<stylesheetfile>src/main/javadoc/stylesheet.css</stylesheetfile>
-						</configuration>
-						<executions>
-							<execution>
-								<id>attach-javadocs</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>			
-				</plugins>
-			</build>
-		</profile>
-	
-		<profile>
-			<id>doRelease</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>${nexus-version}</version>
-						<extensions>true</extensions>
-						<configuration>
-							<serverId>ossrh</serverId>
-							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-							<autoReleaseAfterClose>true</autoReleaseAfterClose>
-						</configuration>
-					</plugin>
-
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>${mvn-gpg-version}</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-
-				</plugins>
-			</build>
-		</profile>
-
-	
-	</profiles>
-
 </project>

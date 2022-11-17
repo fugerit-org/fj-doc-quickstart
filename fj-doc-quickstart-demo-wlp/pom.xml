@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.fugerit.java</groupId>
 		<artifactId>fj-doc-quickstart</artifactId>
-		<version>0.3.9.5-b4</version>
+		<version>0.5.0</version>
 	</parent>
 
 	<artifactId>fj-doc-quickstart-demo-wlp</artifactId>
@@ -88,7 +88,6 @@
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
-			<version>${j2ee-version-compliance}</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -108,29 +107,6 @@
 			<groupId>org.fugerit.java</groupId>
 			<artifactId>fj-doc-quickstart-b-freemarker</artifactId>
 			<version>${project.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j-version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${slf4j-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${slf4j-version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit-version}</version>
 		</dependency>
 
 	</dependencies>
