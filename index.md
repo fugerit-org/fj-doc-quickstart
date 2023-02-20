@@ -1,8 +1,8 @@
 ## Quickstart for fj-doc project (Venus)
 
-*Version : 0.5.0 (fj-mod-quickstart base version is always the fj-doc version used)*
+*Version : 0.8.9 (fj-mod-quickstart base version is always the fj-doc version used)*
 
-*Date : 2021-03-22*
+*Date : 2022-02-20*
 
 *Venus* primary goal is to provide a simple xml doc template to render documents in various formats
 
