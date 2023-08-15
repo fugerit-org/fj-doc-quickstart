@@ -1,28 +1,15 @@
 package org.fugerit.java.doc.qs.facade;
 
-import org.fugerit.java.doc.base.facade.ProcessDocFacade;
+import org.fugerit.java.doc.freemarker.process.FreemarkerDocProcessConfig;
+import org.fugerit.java.doc.freemarker.process.FreemarkerDocProcessConfigFacade;
 
 public class QuickstartDocFacade {
 
-	public final static String PATH_DOC_PROCESS_CONFIG = "cl://doc-facade/doc-process-quickstart.xml";
+	public final static String PATH_DOC_PROCESS_CONFIG = "cl://doc-facade/fm-quickstart-process-config.xml";
 	
-	public final static String PATH_DOC_HANDLER_FACTORY_CONFIG = "cl://doc-facade/doc-handler-quickstart.xml";
-	
-	public final static String CATALOG_ID = "quickstart-default";
-	
-	private static ProcessDocFacade init() {
-		ProcessDocFacade facade = null;
-		try {
-			facade = ProcessDocFacade.newFacade( PATH_DOC_PROCESS_CONFIG, PATH_DOC_HANDLER_FACTORY_CONFIG, CATALOG_ID );
-		} catch (Exception e) {
-			throw new RuntimeException( e );
-		}
-		return facade;
-	}
-	
-	private static ProcessDocFacade INSTANCE = init();
+	private static FreemarkerDocProcessConfig INSTANCE = FreemarkerDocProcessConfigFacade.loadConfigSafe( PATH_DOC_PROCESS_CONFIG );
 
-	public static ProcessDocFacade getInstance() {
+	public static FreemarkerDocProcessConfig getInstance() {
 		return INSTANCE;
 	}
 

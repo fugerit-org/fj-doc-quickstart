@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>org.fugerit.java</groupId>
 		<artifactId>fj-doc-quickstart</artifactId>
-		<version>0.8.9</version>
+		<version>1.4.6-rc.2</version>
 	</parent>
 
 	<name>fj-doc-quickstart-b-freemarker</name>
@@ -67,6 +67,41 @@
 			<version>${fj-doc-version}</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-doc-mod-poi</artifactId>
+			<version>${fj-doc-version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-doc-mod-opencsv</artifactId>
+			<version>${fj-doc-version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency> 
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>		
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j2-impl</artifactId>
+			<scope>provided</scope>
+		</dependency>	
 
 		<dependency>
 			<groupId>junit</groupId>

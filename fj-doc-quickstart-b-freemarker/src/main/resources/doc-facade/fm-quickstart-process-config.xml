@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<freemarker-doc-process-config
+	xmlns="https://freemarkerdocprocess.fugerit.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://freemarkerdocprocess.fugerit.org https://www.fugerit.org/data/java/doc/xsd/freemarker-doc-process-1-0.xsd" > 	
+
+	<!--
+		Configuration stub version : 004 (2023-08-02)
+	-->
+		
+	<docHandlerConfig>
+		<docHandler id="xml-doc" info="xml" type="org.fugerit.java.doc.base.config.DocTypeHandlerXMLUTF8" />
+		<docHandler id="fo-fop" info="fo" type="org.fugerit.java.doc.mod.fop.FreeMarkerFopTypeHandlerUTF8" />
+		<docHandler id="pdf-fop" info="pdf" type="org.fugerit.java.doc.mod.fop.PdfFopTypeHandler"/>
+		<docHandler id="html-fm" info="html" type="org.fugerit.java.doc.freemarker.html.FreeMarkerHtmlTypeHandlerUTF8" />	
+		<docHandler id="html-fragment-fm" info="fhtml" type="org.fugerit.java.doc.freemarker.html.FreeMarkerHtmlFragmentTypeHandlerUTF8" />
+		<docHandler id="md-ext" info="md" type="org.fugerit.java.doc.base.typehandler.markdown.SimpleMarkdownExtTypeHandler" />
+		<docHandler id="xls-poi" info="xls" type="org.fugerit.java.doc.mod.poi.XlsPoiTypeHandler" />
+		<docHandler id="xlsx-poi" info="xlsx" type="org.fugerit.java.doc.mod.poi.XlsxPoiTypeHandler" />			
+		<docHandler id="csv-opencsv" info="csv" type="org.fugerit.java.doc.mod.opencsv.OpenCSVTypeHandler"/>
+	</docHandlerConfig>
+
+	<docChain id="config">
+		<chainStep stepType="config">
+			<config
+				id="QUICKSTART_CONFIG"
+				class="org.fugerit.java.doc.qs.facade.QuickstartDocFacade"
+				exception-handler="RETHROW_HANDLER"
+				fallback-on-null-loop-variable="false"
+				log-exception="false"
+				mode="class"
+				path="/free_marker_quickstart"
+				version="2.3.30"
+				wrap-unchecked-exceptions="true"
+			/>
+		</chainStep>
+	</docChain>
+
+	<docChain id="character-table" parent="config">
+		<chainStep stepType="map">
+			<map name="characterList" value="characterList"/>
+		</chainStep>
+		<chainStep stepType="complex" template-path="dynamic-table-data.ftl">
+		</chainStep>
+	</docChain>
+
+	<docChain id="free-marker-fun" parent="config">
+		<chainStep stepType="function">
+			<function name="messageFormat" value="org.fugerit.java.doc.freemarker.fun.SimpleMessageFun"/>
+			<function name="sumLong" value="org.fugerit.java.doc.freemarker.fun.SimpleSumLongFun"/>
+		</chainStep>
+	</docChain>
+
+	<docChain id="custom-free-marker-method" parent="config,free-marker-fun">
+		<chainStep stepType="map">
+			<map name="messageData" value="messageData"/>
+		</chainStep>
+		<chainStep stepType="complex" template-path="custom-free-marker-method.ftl">
+		</chainStep>
+	</docChain>
+
+	<docChain id="base64-image" parent="config">
+		<chainStep stepType="map">
+			<map name="imgDynamicPipelineBase64" value="imgDynamicPipelineBase64"/>
+		</chainStep>
+		<chainStep stepType="complex" template-path="base64-image.ftl">
+		</chainStep>
+	</docChain>
+
+	<docChain id="complex-process-step" parent="config">
+		<chainStep stepType="complex" map-atts="imgDynamicPipelineBase64" template-path="${chainId}.ftl">
+		</chainStep>
+	</docChain>
+
+	<docChain id="doc-meta-data" parent="config">
+		<chainStep stepType="complex" map-atts="characterList" template-path="${chainId}.ftl">
+		</chainStep>
+	</docChain>
+
+	<docChain id="simple-markdown" parent="config">
+		<chainStep stepType="complex" map-atts="characterList" template-path="${chainId}.ftl">
+		</chainStep>
+	</docChain>
+
+		
+</freemarker-doc-process-config>

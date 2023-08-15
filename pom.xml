@@ -6,13 +6,13 @@
 	<parent>
 		<groupId>org.fugerit.java</groupId>
 		<artifactId>fj-bom</artifactId>
-		<version>0.2.3</version>
+		<version>1.2.3</version>
 		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>fj-doc-quickstart</artifactId>
 	<packaging>pom</packaging>
-	<version>0.8.9</version>
+	<version>1.4.6-rc.2</version>
 
 	<name>fj-doc-quickstart</name>
 	<description>fj-doc-quickstart</description>
@@ -65,7 +65,7 @@
 		<java.version>11</java.version>
 	    <maven.compiler.source>${java.version}</maven.compiler.source>
 	    <maven.compiler.target>${java.version}</maven.compiler.target>		
-		<fj-doc-version>0.8.9</fj-doc-version>		  	
+		<fj-doc-version>${project.version}</fj-doc-version>		  	
 	</properties>
 
 	<modules>

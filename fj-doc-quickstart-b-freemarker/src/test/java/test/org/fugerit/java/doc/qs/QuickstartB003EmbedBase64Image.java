@@ -5,8 +5,8 @@ import java.io.FileOutputStream;
 
 import org.fugerit.java.core.xml.sax.SAXParseResult;
 import org.fugerit.java.doc.base.config.DocConfig;
-import org.fugerit.java.doc.base.facade.ProcessDocFacade;
 import org.fugerit.java.doc.base.process.DocProcessContext;
+import org.fugerit.java.doc.freemarker.process.FreemarkerDocProcessConfig;
 import org.fugerit.java.doc.qs.data.sample.ImageSample;
 import org.fugerit.java.doc.qs.facade.QuickstartDocFacade;
 import org.junit.Test;
@@ -42,7 +42,7 @@ public class QuickstartB003EmbedBase64Image extends TestBase {
 
 	private void generateDoc( String type, String fileName ) {
 		File destFile = this.getOutputFile( fileName );
-		ProcessDocFacade docFacade = QuickstartDocFacade.getInstance();
+		FreemarkerDocProcessConfig docFacade = QuickstartDocFacade.getInstance();
 		try ( FileOutputStream dest = new FileOutputStream( destFile ) ) {
 			// sample image data in base64 format
 			String imgDynamicPipelineBase64 = ImageSample.getBase64ImgDynamicPipeline();

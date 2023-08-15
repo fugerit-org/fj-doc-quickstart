@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.fugerit.java</groupId>
 		<artifactId>fj-doc-quickstart</artifactId>
-		<version>0.8.9</version>
+		<version>1.4.6-rc.2</version>
 	</parent>
 
 	<artifactId>fj-doc-quickstart-demo-springboot</artifactId>
@@ -17,7 +17,7 @@
 		<java.version>11</java.version>
 	    <maven.compiler.source>${java.version}</maven.compiler.source>
 	    <maven.compiler.target>${java.version}</maven.compiler.target>
-		<sb-version>2.7.5</sb-version>
+		<sb-version>2.7.14</sb-version>
 	</properties>
 	
 	<dependencyManagement>
@@ -68,6 +68,18 @@
 			<version>${fj-doc-version}</version>
 			<scope>provided</scope>
 		</dependency>
+
+	  	<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-doc-mod-poi</artifactId>
+			<version>${fj-doc-version}</version>
+		</dependency> 
+	 
+	  	<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-doc-mod-opencsv</artifactId>
+			<version>${fj-doc-version}</version>
+		</dependency> 
 
 		<dependency>
 			<groupId>org.slf4j</groupId>

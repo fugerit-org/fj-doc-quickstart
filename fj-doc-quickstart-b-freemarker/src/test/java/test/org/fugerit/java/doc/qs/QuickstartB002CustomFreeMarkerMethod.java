@@ -6,8 +6,8 @@ import java.util.Properties;
 
 import org.fugerit.java.core.xml.sax.SAXParseResult;
 import org.fugerit.java.doc.base.config.DocConfig;
-import org.fugerit.java.doc.base.facade.ProcessDocFacade;
 import org.fugerit.java.doc.base.process.DocProcessContext;
+import org.fugerit.java.doc.freemarker.process.FreemarkerDocProcessConfig;
 import org.fugerit.java.doc.qs.data.sample.MessageSample;
 import org.fugerit.java.doc.qs.facade.QuickstartDocFacade;
 import org.junit.Test;
@@ -43,7 +43,7 @@ public class QuickstartB002CustomFreeMarkerMethod extends TestBase {
 
 	private void generateDoc( String type, String fileName ) {
 		File destFile = this.getOutputFile( fileName );
-		ProcessDocFacade docFacade = QuickstartDocFacade.getInstance();
+		FreemarkerDocProcessConfig docFacade = QuickstartDocFacade.getInstance();
 		Properties messageData = MessageSample.getMessageData();
 		// in this example we add a property object with two message keys in the doc context
 		DocProcessContext context = DocProcessContext.newContext( "messageData" , messageData );
