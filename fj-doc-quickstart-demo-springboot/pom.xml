@@ -14,9 +14,7 @@
 	<name>fj-doc-quickstart-demo</name>
 	<description>FJ Quickstart SpringBoot Demo</description>
 	<properties>
-		<java.version>11</java.version>
-	    <maven.compiler.source>${java.version}</maven.compiler.source>
-	    <maven.compiler.target>${java.version}</maven.compiler.target>
+		<maven.compiler.release>11</maven.compiler.release>
 		<sb-version>2.7.14</sb-version>
 	</properties>
 	

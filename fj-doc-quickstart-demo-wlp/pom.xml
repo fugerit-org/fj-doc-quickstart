@@ -25,19 +25,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java-version-compliance>11</java-version-compliance>
-		<j2ee-version-compliance>9.0</j2ee-version-compliance>
-		<maven.compiler.source>${java-version-compliance}</maven.compiler.source>
-		<maven.compiler.target>${java-version-compliance}</maven.compiler.target>
-		<junit-version>4.13.2</junit-version>
-		<slf4j-version>1.7.36</slf4j-version>
-		<log4j-version>1.2.17</log4j-version>
+		<maven.compiler.release>11</maven.compiler.release>
+		<jaxrs-version>3.1.0</jaxrs-version>
 		<war-name>${project.artifactId}</war-name>
 		<war-folder>${project.build.directory}/${war-name}</war-folder>
 		<wlp-version>20.0.0.5</wlp-version>
 		<wlp-maven-version>3.8.2</wlp-maven-version>
+		<mvn-war-plugin-version>3.4.0</mvn-war-plugin-version>
 		<packaging.type>minify,runnable</packaging.type>
-		<freemarker-maven-plugin-version>1.0.3</freemarker-maven-plugin-version>
 		<liberty.version>23.0.0.7</liberty.version>		
 	</properties>
 
@@ -50,7 +45,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.2.3</version>
+				<version>${mvn-war-plugin-version}</version>
 			</plugin>	
 
 			<plugin>
@@ -64,10 +59,7 @@
 				    <version>${liberty.version}</version>
 		            <type>zip</type>
 		        </runtimeArtifact>
-			    <configFile>src/main/wlp/server.xml</configFile>
-			    <bootstrapProperties>
-			      <appLocation>../../../../../${project.build.finalName}</appLocation>
-			    </bootstrapProperties>
+                <serverName>testServer</serverName>
 			  </configuration>
 			</plugin>
             
@@ -94,14 +86,7 @@
 		<dependency>
 		    <groupId>jakarta.ws.rs</groupId>
 		    <artifactId>jakarta.ws.rs-api</artifactId>
-		    <version>3.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>7.0</version>
-			<scope>provided</scope>
+		    <version>${jaxrs-version}</version>
 		</dependency>
 		
 		<dependency>
@@ -109,6 +94,11 @@
 			<artifactId>fj-doc-quickstart-b-freemarker</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j2-impl</artifactId>
+		</dependency>	
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -124,44 +114,5 @@
 	</organization>
 
 	<url>http://www.fugerit.org/java/</url>
-
-	<profiles>
-	
-		<profile>
-			<id>full</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-source-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-sources</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<configuration>
-							<stylesheetfile>src/main/javadoc/stylesheet.css</stylesheetfile>
-						</configuration>
-						<executions>
-							<execution>
-								<id>attach-javadocs</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-	</profiles>
 
 </project>
