@@ -22,7 +22,7 @@
     <quarkus-plugin.version>1.12.2.Final</quarkus-plugin.version>
     <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-    <quarkus.platform.version>2.13.3.Final</quarkus.platform.version>
+    <quarkus.platform.version>2.16.9.Final</quarkus.platform.version>
     <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
   </properties>
   
@@ -40,30 +40,6 @@
   
   <dependencies>
   
- 	<dependency>
-		<groupId>org.fugerit.java</groupId>
-		<artifactId>fj-doc-base</artifactId>
-		<version>${fj-doc-version}</version>
-	</dependency>
-  
-  	<dependency>
-		<groupId>org.fugerit.java</groupId>
-		<artifactId>fj-doc-mod-fop</artifactId>
-		<version>${fj-doc-version}</version>
-	</dependency> 
-
-  	<dependency>
-		<groupId>org.fugerit.java</groupId>
-		<artifactId>fj-doc-mod-poi</artifactId>
-		<version>${fj-doc-version}</version>
-	</dependency> 
- 
-  	<dependency>
-		<groupId>org.fugerit.java</groupId>
-		<artifactId>fj-doc-mod-opencsv</artifactId>
-		<version>${fj-doc-version}</version>
-	</dependency> 
- 
 	<dependency>
 		<groupId>org.fugerit.java</groupId>
 		<artifactId>fj-doc-quickstart-b-freemarker</artifactId>
@@ -89,6 +65,12 @@
       <scope>test</scope>
     </dependency>
 
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<scope>provided</scope>
+	</dependency>
+		
   </dependencies>
   
   <build>
