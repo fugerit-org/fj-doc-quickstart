@@ -2,13 +2,13 @@
 <doc
 	xmlns="http://javacoredoc.fugerit.org"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://javacoredoc.fugerit.org https://www.fugerit.org/data/java/doc/xsd/doc-1-4.xsd" > 
+    xsi:schemaLocation="http://javacoredoc.fugerit.org https://www.fugerit.org/data/java/doc/xsd/doc-2-0.xsd" > 
 
-  <!-- 
-  	Sample Apache FreeMarker template for Fugerit Doc.
-  	Note : this example has no intention of being a guidr to FreeMarker
-  			(In case check FreeMarker documentation https://freemarker.apache.org/docs/index.html)
-   -->
+  <!--
+  	This is a Venus Fugerit Doc (https://github.com/fugerit-org/fj-doc) XML Source Document.
+  	For documentation on how to write a valid Venus Doc XML Meta Model refer to : 
+  	https://venusguides.fugerit.org/src/docs/common/doc_format_summary.html
+  -->
 
   <meta>
   </meta>
