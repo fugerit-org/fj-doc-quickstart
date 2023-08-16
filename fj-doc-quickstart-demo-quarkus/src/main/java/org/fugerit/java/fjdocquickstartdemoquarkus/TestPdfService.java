@@ -2,10 +2,11 @@ package org.fugerit.java.fjdocquickstartdemoquarkus;
 
 import java.io.ByteArrayOutputStream;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 import org.fugerit.java.doc.qs.doc.sample.FreemarkerDocSample;
 
@@ -16,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 public class TestPdfService {
 
 	@GET
-	@Produces("application/pdf")
+	@Produces( MediaType.APPLICATION_OCTET_STREAM )
     public Response pdftest() {
 		try {
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
