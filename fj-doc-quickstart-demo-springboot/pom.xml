@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.fugerit.java</groupId>
 		<artifactId>fj-doc-quickstart</artifactId>
-		<version>1.4.6-rc.2</version>
+		<version>3.1.2</version>
 	</parent>
 
 	<artifactId>fj-doc-quickstart-demo-springboot</artifactId>
@@ -15,7 +15,7 @@
 	<description>FJ Quickstart SpringBoot Demo</description>
 	<properties>
 		<maven.compiler.release>11</maven.compiler.release>
-		<sb-version>2.7.14</sb-version>
+		<sb-version>2.7.16</sb-version>
 	</properties>
 	
 	<dependencyManagement>
